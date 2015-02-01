@@ -23,5 +23,13 @@ namespace Json2DataSet.Tests
             Assert.AreEqual(1, dataSet.Tables.Count);
             Assert.AreEqual("Person", dataSet.Tables[0].TableName);
         }
+
+        [TestMethod]
+        public void RootArrayTest()
+        {
+            var dataSet = Json2DataSetConverter.Convert(Helper.ReadJsonFromFile("test002.json"));
+            Assert.AreEqual(1, dataSet.Tables.Count);
+            Assert.AreEqual(4, dataSet.Tables["#"].Rows.Count);
+        }
     }
 }

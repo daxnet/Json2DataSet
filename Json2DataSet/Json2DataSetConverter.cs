@@ -11,10 +11,10 @@ namespace Json2DataSet
 {
     public static class Json2DataSetConverter
     {
-        private static readonly DataSetBuildVisitor visitor = new DataSetBuildVisitor();
         public static DataSet Convert(string json)
         {
             var token = (JToken)JsonConvert.DeserializeObject(json);
+            var visitor = new DataSetBuildVisitor();
             visitor.Visit(token);
             return visitor.DataSet;
         }
@@ -22,9 +22,9 @@ namespace Json2DataSet
         public static DataSet Convert(string json, ConvertOptions options)
         {
             var token = (JToken)JsonConvert.DeserializeObject(json);
-            var thisVisitor = new DataSetBuildVisitor(options);
-            thisVisitor.Visit(token);
-            return thisVisitor.DataSet;
+            var visitor = new DataSetBuildVisitor(options);
+            visitor.Visit(token);
+            return visitor.DataSet;
         }
     }
 }
