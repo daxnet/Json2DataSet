@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="c78cd1f2-3422-4e1e-a4a0-bbd03da5abe0" name="Model" linkedPackageId="e4525171-45be-40c1-a222-a43ea6cd6c12" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="d4c9c41d-cafe-4406-8b78-59e40de79366">
+      <profileInstance Id="ed6b400d-2e4c-458c-bb6d-354c5957c4df" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="5def33da-2535-477d-8e4f-7d0ecd152f1f">
+      <profileInstance Id="9769d41c-3d2b-46aa-96e4-820a10f4c2b7" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="ecaffc89-f2c7-4090-a48f-18000326fafd" name="JToken" isAbstract="true" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="2e79be16-d1d3-47a4-8537-3f9f20e920a5" />
+        <targetEnds>
+          <association Id="ca55e462-ca0d-4277-bdde-34571ad3eebf" isDerived="false" sourceEndRoleName="Parent" targetEndRoleName="Children" isLeaf="false" isAbstract="false">
+            <classMoniker Id="ecaffc89-f2c7-4090-a48f-18000326fafd" LastKnownName="JToken" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5a669a20-1b12-4df7-a9e9-a8c81be4149b" name="Parent" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="4e0a6f2d-056b-4f11-9324-a7582a7cdbea" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="aa916263-030d-480b-8219-bb6db1416f0c" name="Children" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="5c3d4097-515e-492f-ad62-adc0c5c1fcc6" name="Lower" value="*">
+                      <elementDefinition Id="658c0a4f-07c5-4302-9941-db61d43568ce" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="e4fbb408-445b-41a7-bc70-4398c18b3449" name="Upper" value="*">
+                      <elementDefinition Id="149ada36-6d44-4932-887a-8ba961043ef9" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="c810c6bf-5575-4e58-96da-7865f110fc8a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="ad58603c-8f7c-41f8-9f07-30d1ccf9c8aa" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="c762c8c8-6bea-40b9-ac10-92e7b40e1424" name="Children" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="3d82a63a-358b-4914-8456-eb71222f06d5" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="6104618a-064b-45a0-9295-64d49ef4f024" LastKnownName="JEnumerable&lt;JToken&gt;" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="b56fb745-809b-4039-8601-b610640390af" name="JContainer" isAbstract="true" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="b584083a-95d4-4857-9367-49effad057b7" />
+        <generalsInternal>
+          <generalization Id="3f6600d2-82e9-4235-9394-9e533a122b00" isSubstitutable="false">
+            <classMoniker Id="ecaffc89-f2c7-4090-a48f-18000326fafd" LastKnownName="JToken" />
+            <elementDefinition Id="9dbd4f38-e6c2-4d10-ba36-e4784861ad34" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="78521659-23c9-4280-8c91-3f59ae99205d" name="JObject" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="bb618924-b2df-4b7d-9f68-3015123c45ec" />
+        <generalsInternal>
+          <generalization Id="060c3356-e364-4807-b096-1767cae33c85" isSubstitutable="false">
+            <classMoniker Id="b56fb745-809b-4039-8601-b610640390af" LastKnownName="JContainer" />
+            <elementDefinition Id="29d061df-de4a-4b1d-923d-646afdf53c4d" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="77af4e33-0ebf-4f0e-9a12-aa5372f4bd65" name="JProperty" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="9a84a1d5-055c-4488-99d4-5c4327ca09cf" />
+        <generalsInternal>
+          <generalization Id="03527c69-32e9-4c80-b0b4-ab34d15ff018" isSubstitutable="false">
+            <classMoniker Id="b56fb745-809b-4039-8601-b610640390af" LastKnownName="JContainer" />
+            <elementDefinition Id="52850aa6-265c-4a5e-9542-09c59ba39a0f" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="385321d5-4aaa-4ea5-9263-1f14c82a1f07" name="JArray" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="6d5fc8cd-a0fe-4277-a734-c47525e89459" />
+        <generalsInternal>
+          <generalization Id="4cf3851b-3ad7-4eb4-b890-4b511d09b185" isSubstitutable="false">
+            <classMoniker Id="b56fb745-809b-4039-8601-b610640390af" LastKnownName="JContainer" />
+            <elementDefinition Id="c66e703d-17e5-4858-bf8c-759cf4450d1c" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="6104618a-064b-45a0-9295-64d49ef4f024" name="JEnumerable&lt;JToken&gt;" isAbstract="false" isLeaf="false" cachedFullName="JEnumerable&lt;JToken&gt;">
+        <elementDefinition Id="39069d7c-e8ce-49ce-b80c-f3780fb5e285" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="1af24797-f92a-4dc8-8948-bfef5a973fae" name="JVisitor" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="7cb50535-9730-4ea3-9da2-02a404ac2685" />
+        <targetEnds>
+          <association Id="cab20b2d-2c64-429f-8b92-915fd89c674b" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
+            <classMoniker Id="ecaffc89-f2c7-4090-a48f-18000326fafd" LastKnownName="JToken" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8c6d2f56-6ba6-4a99-b460-c05a1e5d84bb" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="09075a36-9779-4b6a-89bc-6d31b9742f09" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d23bffa4-111f-4bd5-8c43-841aa81ce177" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="72d7aa3f-a55a-4f09-be70-bedb1236b616" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="9c67562b-59bb-4458-b27d-51270f673e10" />
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation Id="9d050764-e487-4881-bea8-a405889beacf" name="Visit" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="77187b5a-ef80-493f-ab52-f5532b669956" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="35ba48ac-1fa8-49a7-b47b-1c48f343071f" name="JToken token" direction="In" isUnique="false">
+                  <elementDefinition Id="8e36c84c-cb54-453c-a371-cb228b096b11" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="031b5ae6-66c4-4c0a-8770-8b91e648225d" name="VisitObject" visibility="Protected" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="a40a10d6-a59e-4dc4-9272-6f623f7364bd" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="74a266a0-10f2-4638-ac2e-16fa9da4f901" name="JObject obj" direction="In" isUnique="false">
+                  <elementDefinition Id="3346e708-fc33-436f-b066-145ffed4c447" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="b7b933f3-feec-4325-9a2c-5b76e268c510" name="VisitProperty" visibility="Protected" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="f0f3f225-1b8e-4c5f-a2da-e8fa376ba41a" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="c8dda54d-2048-4193-8dc8-382098532779" name="JProperty property" direction="In" isUnique="false">
+                  <elementDefinition Id="ee10aee9-51ec-4305-842b-d4a3cd8b422d" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="b4fbaaa5-d03d-40b8-be96-3144d3636cf7" name="VisitArray" visibility="Protected" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="b3f603e4-ef8f-4819-bff3-2a7632a1ccb8" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="d8db67cc-3952-4984-bf81-02ca587dd7a4" name="JArray array" direction="In" isUnique="false">
+                  <elementDefinition Id="32e3cf4c-ed1d-451b-93ef-3451ee11db4c" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="983817b8-963e-45d7-bea6-d18d2d1a305c" name="DataSetBuildVisitor" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="1651f83f-0577-4789-91df-980019d8741f" />
+        <generalsInternal>
+          <generalization Id="7b9ff73d-6426-44fb-8876-441883d8c8f9" isSubstitutable="false">
+            <classMoniker Id="1af24797-f92a-4dc8-8948-bfef5a973fae" LastKnownName="JVisitor" />
+            <elementDefinition Id="4f64be85-731d-482b-8764-bffa995cc1d5" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="d200edce-4626-45b3-8b18-9ae2332839c9" name="VisitObject" visibility="Protected" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="56eb4d48-9467-4e3c-b5a5-34d32013c01a" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="de50c669-3725-4090-b20c-e938b8a1ccfd" name="JObject obj" direction="In" isUnique="false">
+                  <elementDefinition Id="5d7270e7-0f18-4aad-864c-e671e4e32d48" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="b2226c5a-ac8a-4a1a-ae32-d0c70948297b" name="VisitProperty" visibility="Protected" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="79d30795-9f5a-4014-b567-f12effefe9b9" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="1467522c-5ff5-4b90-b67d-c6d018256079" name="JProperty property" direction="In" isUnique="false">
+                  <elementDefinition Id="fbdf0a93-08bc-46b7-a85d-54cdc3bcf14f" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="9ad6e1ed-2c7b-4068-9770-0f79caf2c8a9" name="VisitArray" visibility="Protected" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="e2f2eb93-c496-40a7-acd1-3559e19e10d9" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="3bfad7ee-40a4-4b7a-8985-1f1ea108b2ef" name="JArray array" direction="In" isUnique="false">
+                  <elementDefinition Id="21d2df68-ee23-49ea-8801-47d058bdeb3e" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="e4525171-45be-40c1-a222-a43ea6cd6c12" name="Json2DataSet.Design">
+    <elementDefinition Id="77c48a55-cbd7-45e1-9648-10984911b5f9" />
+  </package>
+</logicalClassDesignerModel>
